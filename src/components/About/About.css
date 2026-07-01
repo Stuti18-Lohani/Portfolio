@@ -1,0 +1,114 @@
+.about-section {
+  padding: 100px 0;
+  background-color: var(--bg-dark);
+}
+
+.about-content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-label {
+  color: var(--violet);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.about-main-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+
+
+/* Bottom Grid (Two Boxes) */
+.about-details-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+}
+
+.detail-box {
+  background-color: rgba(255, 255, 255, 0.02); /* Very subtle background */
+  border: 1px solid rgba(226, 232, 240, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  transition: var(--transition-smooth);
+}
+
+.detail-box:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.text-box p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.stats-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), transparent);
+}
+
+.stat-num {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--violet);
+  display: block;
+  line-height: 1;
+}
+
+.stat-desc {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(226, 232, 240, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-label{
+    text-align: center;
+  }
+  .about-details-grid {
+    grid-template-columns: 1fr;
+  }
+}

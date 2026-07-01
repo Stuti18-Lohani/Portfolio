@@ -1,0 +1,100 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    position: relative;
+    background-color: var(--bg-dark);
+}
+
+.hero__glow {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(245, 158, 11, 0.05) 50%, transparent 70%);
+    z-index: 0;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.hero__title {
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+
+.text-gradient {
+    color: var(--gold);
+    background-image: linear-gradient(180deg, #fff 0%, var(--gold) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.hero-description strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.hero__btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn-filled {
+    background: var(--gold);
+    color: #000;
+    border: none;
+    padding: 1.2rem 2.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-filled:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(226, 232, 240, 0.3);
+    color: #fff;
+    padding: 1.2rem 2.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+    background: rgba(226, 232, 240, 0.05);
+    border-color: #fff;
+}

@@ -1,0 +1,126 @@
+/* Full Width Form Box - Using your detail-box theme */
+.contact-form-full {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(226, 232, 240, 0.05);
+  border-radius: 24px;
+  padding: 50px;
+  margin-bottom: 60px; /* Space before footer */
+  transition: var(--transition-smooth);
+}
+
+.contact-form-full:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.luxury-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.luxury-form input, 
+.luxury-form textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  border-radius: 12px;
+  padding: 18px;
+  color: white;
+  font-family: inherit;
+  transition: var(--transition-smooth);
+}
+
+.luxury-form input:focus, 
+.luxury-form textarea:focus {
+  outline: none;
+  border-color: var(--violet);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.submit-btn {
+  background: transparent;
+  border: 1px solid var(--violet);
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: var(--transition-smooth);
+  width: fit-content;
+  min-width: 200px;
+}
+
+.submit-btn:hover {
+  background: var(--violet);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+/* Footer Bottom Row Styling */
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 40px;
+  border-top: 1px solid rgba(226, 232, 240, 0.05);
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--gold);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--violet);
+  border-radius: 50%;
+}
+
+.hover-gold:hover {
+  color: var(--gold) !important;
+  cursor: pointer;
+}
+
+.right-align {
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .input-group { grid-template-columns: 1fr; }
+  .footer-bottom-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  .right-align { text-align: center; }
+  .submit-btn { width: 100%; }
+}

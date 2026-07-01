@@ -1,0 +1,168 @@
+.projects-section {
+  padding: 100px 0; /* Vertical spacing matching About */
+  background-color: var(--bg-dark);
+}
+
+/* About section ke container jaisa hi logic */
+.projects-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.project-label {
+  color: var(--violet);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Projects ke beech ka gap */
+  margin-top: 60px;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 60px; /* Image aur Text ke beech ka professional gap */
+}
+
+.project-item.rev {
+  flex-direction: row-reverse;
+}
+
+/* Text side styling - matching About detail-box look */
+.project-content {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(226, 232, 240, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  transition: var(--transition-smooth);
+  position: relative;
+  z-index: 2;
+}
+
+.project-content:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Image Side */
+.project-visual {
+  flex: 1;
+  position: relative;
+}
+
+.img-box {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Landscape shape ke liye */
+  /* aspect-ratio: 4 / 3; Professional look ke liye */
+  height: auto; /* Fixed height hata dein */
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%) brightness(0.8);
+  transition: var(--transition-smooth);
+}
+
+.project-item:hover img {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* Background Numbers - Subtle Luxury */
+.p-num {
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  font-family: 'Syne', sans-serif;
+  z-index: -1;
+}
+
+/* Project Text Details */
+.p-cat {
+  color: var(--violet);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.p-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 15px;
+  font-family: 'Syne', sans-serif;
+}
+
+.p-desc {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* Tags logic */
+.p-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.p-tag {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--violet);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Luxury Link */
+.p-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-link:hover span {
+  transform: translateX(8px);
+  display: inline-block;
+}
+
+/* Responsive Fix */
+@media (max-width: 900px) {
+  .project-item, .project-item.rev {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .p-title { font-size: 1.8rem; }
+  .img-box { height: 300px; }
+}

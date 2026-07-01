@@ -1,0 +1,41 @@
+:root{
+  --bg-dark: #0B0114;
+  --text-main: #E2E8F0;
+  --text-muted: rgba(226, 232, 240, 0.6);
+  --violet: #8B5CF6;
+  --gold: #F59E0B;
+  
+  /* Gradiente for buttons or text if needed */
+  --gradient-btn: linear-gradient(135, #8B5CF6, #F59E0B);
+  
+  /* Professional Spacing & Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar-track{
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #2a1a3d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--violet);
+}
