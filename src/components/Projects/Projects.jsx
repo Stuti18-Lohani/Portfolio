@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.css';
 
-import inventoryImg from '../../assets/inventory-image.png'
+import inventoryImg from '../../assets/Inventory-image.png'
 import pokemonCardImg from '../../assets/pokemon-cards-image.png'
 import foodDeliveryImg from '../../assets/food-delivery-image.png'
 
